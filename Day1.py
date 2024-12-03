@@ -14,12 +14,17 @@ def Load():
             line = line.strip()
             list2.appead(line)
 
-finalDistance
+finalDistance = 0
 def Dicer():
-    for items in list1:
+    global finalDistance
+    for item1, item2 in zip(list1, list2):
         for i in range(5):
-            l1 += items[i]
-            l2 += list2[i]
-            print(l1 + l2)
-        //12345
-    
+            char1 = str(item1)[i]
+            char2 = str(item2)[i]
+            result = int(char1) + int(char2)
+            print(result)
+            finalDistance = int(result) + int(finalDistance)
+    print(finalDistance)
+
+Load()
+Dicer()
