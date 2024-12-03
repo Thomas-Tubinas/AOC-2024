@@ -17,12 +17,14 @@ def Load():
 finalDistance = 0
 def Dicer():
     global finalDistance
-    for item1, item2 in zip(list1, list2):
-        char1 = str(item1)
-        char2 = str(item2)
-        result = abs(int(char1) - int(char2))
-        print(result)
-        finalDistance = int(result) + int(finalDistance)
+    for item in list1:
+        counter = 0
+        char = str(item)
+        for items in list2:
+            if(char == str(items)):
+                counter = counter + 1
+        result = counter * int(char)
+        finalDistance += result
     print(finalDistance)
 
 Load()
